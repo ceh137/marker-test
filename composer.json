@@ -1,0 +1,24 @@
+{
+    "name": "hp/marker",
+    "authors": [
+        {
+            "name": "webmediaart",
+            "email": "webmediaart@yandex.ru"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.13",
+        "jonnyw/php-phantomjs": "4.*",
+        "chrome-php/chrome": "^0.8.1",
+        "picqer/php-barcode-generator": "^2.0",
+        "tecnickcom/tc-lib-barcode": "1.15.8"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "PhantomInstaller\\Installer::installPhantomJS"
+        ],
+        "post-update-cmd": [
+            "PhantomInstaller\\Installer::installPhantomJS"
+        ]
+    }
+}

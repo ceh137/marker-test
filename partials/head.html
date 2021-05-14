@@ -1,0 +1,56 @@
+<head>
+<!-- General -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>{$title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="description" content="{$ref.const.DEFAULT_DESC}" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="{$ref.const.DEFAULT_TITLE}">
+<meta name="format-detection" content="telephone=no">
+<meta name="google" content="notranslate">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#ffffff">
+<!-- Apple & Android -->
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-touch-icon-60x60.png" />
+<link rel="manifest" href="/manifest.json?2" />
+<!-- Common Icons -->
+<link rel="shortcut icon" href="/favicon.ico?2" type="image/x-icon" />
+<link rel="mask-icon" sizes="any" href="/favicon-pinned.svg?2" color="#2871d0" />
+<!-- CSS Files -->
+<link rel="stylesheet" type="text/css" media="all" href="/css/fonts.css?57" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/common.css?263" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/section/auth.css?10" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/section/passport.css?109" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/section/print.css?20" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/section/product.css?115" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/section/scans.css?5" />
+{if $global.path == 'login' || $global.path == 'new_password'}
+<link rel="stylesheet" type="text/css" media="all" href="/css/section/intro.css?70" />
+{/if}
+<!-- Java Script Files -->
+<script type="text/javascript" src="/js/lib/common.js?71"></script>
+<script type="text/javascript" src="/js/common.js?126"></script>
+<script type="text/javascript" src="/js/owner.js?23"></script>
+<script type="text/javascript" src="/js/section/pick.js?12"></script>
+<script type="text/javascript" src="/js/section/scan.js?11"></script>
+{if $global.path == 'login' || $global.path == 'new_password'}
+<script type="text/javascript" src="/js/section/intro.js?39"></script>
+{/if}
+<!-- Global Vars -->
+<script type="text/javascript">
+var global = {literal}{{/literal}
+	access: {$global.access},
+	path: "{$global.path}",
+	company_id: {$global.company_id},
+	user_id: {$global.user_id},
+{if $global.path == 'product'}
+ 	group_id: {$product.group_id},
+{/if}
+{literal}}{/literal}
+</script>
+</head>

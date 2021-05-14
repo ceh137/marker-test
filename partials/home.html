@@ -1,0 +1,32 @@
+<div id="modal"><div id="modal_container"><div id="modal_overlay"><div class="dn" id="modal_close" onclick="common.modal_hide();"><i class="icon icon_delete"></i></div><div id="modal_content"></div></div></div></div>
+<div id="scroll_fix">
+<div id="content"{if $global.menu == 0} class="short"{/if}>
+		<div id="top_menu">
+			<div id="top_menu_left">
+				<i class="icon icon_burger top_menu_burger" onclick="common.menu_toggle();"></i>
+				<a class="top_menu_logo" href="/">маркер</a>
+				<div style="width: 100%; height: 36px; margin-top: 6px; border-right: 1px solid #e2e6e7;"></div>
+			</div>
+			<div id="top_menu_main">
+			</div>
+			<div id="top_menu_right">
+				<a href="/logout" class="top_menu_item" style="right: 0px; text-decoration: none;"><i class="icon icon_logout" style="font-size: 18px; color: #04368f; top: 48%;"></i></a>
+				<div id="owner_name" style="font-size: 13px; margin-top: 10px; font-weight: 600; text-transform: uppercase; color: #04368f; letter-spacing: 0;">{$owner.full_name}</div>
+				<div style="font-size: 11px; margin-top: 2px; font-weight: 600; text-transform: uppercase;">{$owner.company_title}</div>
+			</div>
+		</div>
+		<div id="menu">
+			<a class="menu_item{if $global.path == 'scans'} select{/if}" href="/scans">
+				<i class="icon icon_scans" style="font-size: 20px;"></i><span>Сканирование</span>
+			</a>
+			<a class="menu_item{if $global.path == 'picks'} select{/if}" href="/picks">
+				<i class="icon icon_products" style="font-size: 20px;"></i><span>Оприходование</span>
+			</a>
+		</div>
+		<div id="main_content_wrap">
+			<div id="main_content">
+				{include file="$main_content"}
+			</div>
+		</div>
+	</div>
+</div>
